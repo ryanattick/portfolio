@@ -1,0 +1,473 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+body {
+  background-color: #262626;
+}
+
+.video {
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  height: 100%;
+}
+
+.bg-video {
+  /*position: absolute;
+  top: 0;
+  bottom: 0;*/
+  /*width: 100%;
+  height: 100%;*/
+  overflow: hidden;
+}
+
+.bg-video__content {
+  /*position: absolute;*/
+  /*top: 50%;
+  left: 50%;*/
+  /*transform: translate(-50%,-50%);*/
+  height: 100vh;
+  width: auto;
+}
+
+
+.logo {
+  height: 3rem;
+  width: auto;
+  position: fixed;
+  z-index: 1;
+  margin: 3rem;
+}
+
+.title {
+  color: white;
+  position: absolute;
+  left: 30%;
+  bottom: 15%;
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 550%;
+  font-weight: 700;
+
+}
+
+.title h2 {
+  font-size: 200%;
+  font-weight: 300;
+}
+
+.profile-photo {
+  height: 15rem;
+  width: auto;
+  border-radius: 10px/30px;
+  margin-top: 2rem;
+  transition: all 0.6s;
+  margin-left: 35%
+}
+
+.profile-photo:hover {
+  height: 25rem;
+  width: auto;
+  margin-left: 10%;
+}
+
+.profile-photo:hover + .bio-text {
+  color: white;
+  background-color: rgba(79, 243, 200, 0.2);
+  border-radius: 10px/30px;
+  padding: 0.5rem;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-text {
+  width: 15rem;
+  height: auto;
+  color: transparent;
+  margin: 1rem;
+  word-spacing: 0.3rem;
+  font-weight: 100;
+  transition: all 1s;
+}
+
+.projects {
+  height: 70rem;
+  width: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin: 3rem;
+  color:  #262626;
+}
+
+.block {
+  height: 20rem;
+  width: auto;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+
+}
+
+/*____________________________________________*/
+/*CARD FLIPPING*/
+.card {
+  height: 23rem;
+  width: 20rem;
+  margin: 1rem;
+  transition: all 1s;
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+ }
+
+.front {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	position:absolute;
+	transform: perspective( 600px ) rotateY( 0deg );
+	background:  #262626;
+  height: 23rem;
+  width: 20rem;
+  border-radius: 7px;
+	backface-visibility: hidden;
+	transition: transform .5s linear 0s;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.back {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	position:absolute;
+	transform: perspective( 600px ) rotateY( 180deg );
+	background:  #262626;
+  width: 20rem;
+  height: 23rem;
+  border-radius: 7px;
+	backface-visibility: hidden;
+	transition: transform 0.7s linear 0s;
+}
+.card:hover .front{
+	transform: perspective( 600px ) rotateY( -180deg );
+
+}
+.card:hover .back{
+	transform: perspective( 600px ) rotateY( 0deg ) scale(1.1);
+}
+
+/*CARD FLIPPING ^^^^^^^*/
+/*_______________________________________________________________________*/
+
+
+.back {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.back-heading {
+  text-align: center;
+  color: white;
+  /*padding-bottom: 0.5rem;*/
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.back-about-text {
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  margin: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(79, 243, 200, 0.7);
+  padding-bottom: 1rem;
+}
+
+.lists {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  font-weight: 300;
+  margin: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.list-ele {
+  /*color: white;*/
+  list-style: none;
+}
+
+.btn {
+  margin: 0.5rem;
+  margin-top: 0;
+  /*margin: 3rem;*/
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 7px;
+  padding: 0.5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-full {
+  background-color: white;
+  transition: all 0.3s;
+  color: #262626;
+}
+
+.btn-clear {
+  color: white;
+  font-weight: 300;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  border: 2px solid rgba(79, 243, 200);
+}
+
+.btn-full:hover {
+  background-color: rgba(79, 243, 200);
+}
+
+.btn-clear:hover {
+  color: rgba(79, 243, 200);
+}
+
+.card-title {
+  background-color: #262626;
+  color: white;
+  padding: 0.8rem;
+  opacity: 0.8;
+  border-radius: 7px;
+  margin: 1rem;
+  font-weight: 300;
+}
+
+
+.natours {
+  background-image: url(assets/Natours.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.omnifood {
+  background-image: url(assets/Omnifood.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.forgotten {
+  background-image: url(assets/Forgotten.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.picognito {
+  background-image: url(assets/Picognito.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.passpass {
+  background-image: url(assets/PassPass.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.project-name {
+  text-transform: uppercase;
+  position: absolute;
+  top: 15rem;
+  left: 10rem;
+}
+
+/*________________________________________________________*/
+/*TECH SKILLS*/
+
+.skills {
+  background-image: linear-gradient(rgba(38, 38, 38, 0.5), rgba(38, 38, 38, 0.5)), url(assets/computer.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 140vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+}
+
+.skills h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-top: 3rem;
+  color: white;
+}
+
+.skill {
+  border-radius: 7px;
+  height: 3rem;
+  width: 60%;
+  /*border: 1px solid #262626;*/
+  display: flex;
+}
+
+.skill-text {
+  background-color: #262626;
+  height: 100%;
+  max-width: 10rem;
+  min-width: 10rem;
+  text-align: center;
+  color: white;
+  font-weight: 300;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  line-height: 2.8rem;
+}
+
+.skill-amount {
+  background-color: rgba(79, 243, 200, 0.7);
+  width: 5%;
+  height: 100%;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  transition: all .8s;
+}
+
+.skills:hover .javascript {
+  width: 100%;
+}
+
+.skills:hover .html5 {
+  width: 70%;
+}
+
+.skills:hover .css3 {
+  width: 70%;
+}
+
+.skills:hover .node {
+  width: 70%;
+}
+
+.skills:hover .react {
+  width: 70%;
+}
+
+.skills:hover .angular {
+  width: 60%
+}
+
+.skills:hover .sql {
+  width: 60%;
+}
+
+.skills:hover .mongo {
+  width: 70%;
+}
+
+.skills:hover .flexbox {
+  width: 70%;
+}
+
+.skills:hover .git {
+  width: 40%;
+}
+
+/*TECH SKILLS ^^^^^^^^^^^^^^^^*/
+/*________________________________________________*/
+/*SOFT SKILLS*/
+
+.soft-skills {
+  background-color: white;
+  height: 100vh;
+  width: auto;
+}
+
+.soft-skills h1 {
+  font-size: 4rem;
+  text-align: center;
+  padding: 3rem;
+  color: #262626;
+}
+
+.icons {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+
+}
+
+.icon {
+  width: 45%;
+  height: auto;
+  margin-bottom: 3%;
+  text-align: center;
+}
+
+.icon-img {
+  width: 10%;
+  height: auto;
+}
+
+/*__________________________________________________*/
+/*FOOTER*/
+
+footer {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60rem;
+}
+
+.contact div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-logo {
+  height: 5rem;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.4s;
+  background:none;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+}
+
+
+
+.contact-logo:hover {
+  background: rgba(79, 243, 200);
+  margin: 0;
+}
