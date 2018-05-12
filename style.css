@@ -27,21 +27,23 @@ body {
 }
 
 .bg-video__content {
-  /*position: absolute;*/
-  /*top: 50%;
-  left: 50%;*/
-  /*transform: translate(-50%,-50%);*/
   height: 100vh;
   width: auto;
 }
 
 
 .logo {
-  height: 3rem;
+  height: 7%;
   width: auto;
   position: fixed;
   z-index: 1;
   margin: 3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logo:hover {
+  height: 10%
 }
 
 .title {
@@ -123,7 +125,7 @@ body {
   display: flex;
   align-items: stretch;
   justify-content: space-around;
-
+  flex-wrap: wrap;
 }
 
 /*____________________________________________*/
@@ -292,6 +294,12 @@ body {
   background-position: center;
 }
 
+.reading-partners {
+  background-image: url(assets/RPComprehension.png);
+  background-size: cover;
+  background-position: center;
+}
+
 .project-name {
   text-transform: uppercase;
   position: absolute;
@@ -343,7 +351,7 @@ body {
 }
 
 .skill-amount {
-  background-color: rgba(79, 243, 200, 0.7);
+  background-color: rgba(79, 243, 200, 0.9);
   width: 5%;
   height: 100%;
   border-top-right-radius: 7px;
@@ -405,7 +413,7 @@ body {
 
 .soft-skills {
   background-color: white;
-  height: 100vh;
+  height: 110vh;
   width: auto;
 }
 
@@ -424,7 +432,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   height: auto;
-
+  /*margin-bottom: 5rem;*/
 }
 
 .icon {
