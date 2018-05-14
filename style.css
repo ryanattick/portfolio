@@ -506,8 +506,19 @@ footer {
 
 @media only screen and (max-width: 400px) {
 
+  html
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+
   .logo {
-    height: 2%;
+    height: 4.5%;
+    margin: 1rem;
   }
 
   .icon-img {
@@ -521,5 +532,11 @@ footer {
 
   .contact-logo {
     height: 3.5rem;
+    margin: 0.5rem;
+  }
+
+  .contact-logo:hover {
+    margin: 0.5rem;
+    height: 4rem;
   }
 }
