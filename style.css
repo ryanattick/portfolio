@@ -7,11 +7,13 @@
   font-family: 'Lato', 'Arial', sans-serif;
 }
 
-/*html,*/
 body {
   background-color: #262626;
-  /*overflow-x: hidden;*/
-  /*width: 100vh;*/
+}
+
+header {
+  height: 100%;
+  width: auto;
 }
 
 
@@ -42,13 +44,13 @@ body {
   position: fixed;
   z-index: 1;
   margin: 3rem;
-  cursor: pointer;
+  /*cursor: pointer;*/
   transition: all 0.3s;
 }
 
-.logo:hover {
+/*.logo:hover {
   height: 9%
-}
+}*/
 
 .title {
   color: white;
@@ -76,6 +78,7 @@ body {
   margin-top: 2rem;
   transition: all 0.6s;
   margin-left: 35%
+  /*cursor: pointer;*/
 }
 
 .profile-photo:hover {
@@ -193,10 +196,11 @@ body {
 .back {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .back-heading {
+  margin-top: 1rem;
   text-align: center;
   color: white;
   /*padding-bottom: 0.5rem;*/
@@ -212,20 +216,6 @@ body {
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(79, 243, 200, 0.7);
   padding-bottom: 1rem;
-}
-
-.lists {
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  font-weight: 300;
-  margin: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-.list-ele {
-  /*color: white;*/
-  list-style: none;
 }
 
 .btn {
@@ -396,7 +386,7 @@ body {
 }
 
 .skills:hover .react {
-  width: 80%;
+  width: 90%;
 }
 
 .skills:hover .angular {
@@ -506,14 +496,24 @@ footer {
 
 @media only screen and (max-width: 400px) {
 
-  html
-{
+  html {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-}
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+    position: relative;
+    margin: 0;
+  }
+
+  .video {
+    display: none;
+  }
 
 
   .logo {
