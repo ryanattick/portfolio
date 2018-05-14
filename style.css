@@ -7,14 +7,18 @@
   font-family: 'Lato', 'Arial', sans-serif;
 }
 
+/*html,*/
 body {
   background-color: #262626;
+  /*overflow-x: hidden;*/
+  /*width: 100vh;*/
 }
+
 
 .video {
   -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  height: 100%;
+  height: 100vh;
 }
 
 .bg-video {
@@ -43,7 +47,7 @@ body {
 }
 
 .logo:hover {
-  height: 10%
+  height: 9%
 }
 
 .title {
@@ -104,7 +108,7 @@ body {
 }
 
 .projects {
-  height: 70rem;
+  height: 100%;
   width: auto;
   background-color: white;
   display: flex;
@@ -119,11 +123,11 @@ body {
 }
 
 .block {
-  height: 20rem;
-  width: auto;
+  height: auto;
+  width: 100%;
   margin-bottom: 5rem;
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -143,13 +147,16 @@ body {
 .front {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 	position:absolute;
-	transform: perspective( 600px ) rotateY( 0deg );
+  -webkit-transform: perspective( 600px ) rotateY( 0deg );
+  transform: perspective( 600px ) rotateY( 0deg );
 	background:  #262626;
   height: 23rem;
   width: 20rem;
   border-radius: 7px;
-	backface-visibility: hidden;
-	transition: transform .5s linear 0s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: -webkit-transform .5s linear 0s;
+  transition: transform .5s linear 0s;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -158,20 +165,25 @@ body {
 .back {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 	position:absolute;
-	transform: perspective( 600px ) rotateY( 180deg );
+  -webkit-transform: perspective( 600px ) rotateY( 180deg );
+  transform: perspective( 600px ) rotateY( 180deg );
 	background:  #262626;
   width: 20rem;
   height: 23rem;
   border-radius: 7px;
+  -webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	transition: transform 0.7s linear 0s;
+  transition: -webkit-transform .5s linear 0s;
+  transition: transform .5s linear 0s;
 }
 .card:hover .front{
+  -webkit-transform: perspective( 600px ) rotateY( -180deg );
 	transform: perspective( 600px ) rotateY( -180deg );
 
 }
 .card:hover .back{
-	transform: perspective( 600px ) rotateY( 0deg ) scale(1.1);
+  -webkit-transform: perspective( 600px ) rotateY( 0deg );
+	transform: perspective( 600px ) rotateY( 0deg );
 }
 
 /*CARD FLIPPING ^^^^^^^*/
@@ -376,7 +388,7 @@ body {
 }
 
 .skills:hover .css3 {
-  width: 70%;
+  width: 80%;
 }
 
 .skills:hover .node {
@@ -413,7 +425,7 @@ body {
 
 .soft-skills {
   background-color: white;
-  height: 110vh;
+  height: 100%;
   width: auto;
 }
 
@@ -486,4 +498,28 @@ footer {
 .contact-logo:hover {
   background: rgba(79, 243, 200);
   margin: 0;
+}
+
+
+/*____________________________________________________*/
+/*MEDIA QUERIES*/
+
+@media only screen and (max-width: 400px) {
+
+  .logo {
+    height: 2%;
+  }
+
+  .icon-img {
+    width: 30%;
+  }
+
+  footer {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .contact-logo {
+    height: 3.5rem;
+  }
 }
