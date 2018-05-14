@@ -370,6 +370,10 @@ header {
 }
 
 
+.percentage {
+  color: transparent;
+}
+
 .skills:hover .javascript {
   width: 90%;
 }
@@ -568,6 +572,10 @@ footer {
     text-align: center;
     min-width: 30%;
     background-color: rgba(79, 243, 200);
+  }
+
+  .percentage {
+    color: black;
   }
 
   .skill-amount {
