@@ -180,13 +180,13 @@ header {
   transition: transform .5s linear 0s;
 }
 .card:hover .front,
-.card:focus .front {
+.card:active .front {
   -webkit-transform: perspective( 600px ) rotateY( -180deg );
 	transform: perspective( 600px ) rotateY( -180deg );
 
 }
 .card:hover .back,
-.card:focus .back{
+.card:active .back{
   -webkit-transform: perspective( 600px ) rotateY( 0deg );
 	transform: perspective( 600px ) rotateY( 0deg );
 }
@@ -246,18 +246,18 @@ header {
 }
 
 .btn:hover,
-.btn:focus {
+.btn:active {
   border: 2px solid rgba(79, 243, 200);
 }
 
 .btn-full:hover,
-.btn-full:focus
+.btn-full:active
 {
   background-color: rgba(79, 243, 200);
 }
 
 .btn-clear:hover,
-.btn-clear:focus {
+.btn-clear:active {
   color: rgba(79, 243, 200);
 }
 
@@ -497,7 +497,7 @@ footer {
 
 
 .contact-logo:hover,
-.contact-logo:focus {
+.contact-logo:active {
   background: rgba(79, 243, 200);
   margin: 0;
 }
@@ -600,7 +600,7 @@ footer {
   }
 
   .contact-logo:hover,
-  .contact-logo:focus {
+  .contact-logo:active {
     margin: 0.5rem;
     height: 4rem;
   }
