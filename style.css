@@ -179,12 +179,14 @@ header {
   transition: -webkit-transform .5s linear 0s;
   transition: transform .5s linear 0s;
 }
-.card:hover .front{
+.card:hover .front,
+.card:focus .front {
   -webkit-transform: perspective( 600px ) rotateY( -180deg );
 	transform: perspective( 600px ) rotateY( -180deg );
 
 }
-.card:hover .back{
+.card:hover .back,
+.card:focus .back{
   -webkit-transform: perspective( 600px ) rotateY( 0deg );
 	transform: perspective( 600px ) rotateY( 0deg );
 }
@@ -243,15 +245,19 @@ header {
   transition: all 0.3s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   border: 2px solid rgba(79, 243, 200);
 }
 
-.btn-full:hover {
+.btn-full:hover,
+.btn-full:focus
+{
   background-color: rgba(79, 243, 200);
 }
 
-.btn-clear:hover {
+.btn-clear:hover,
+.btn-clear:focus {
   color: rgba(79, 243, 200);
 }
 
@@ -490,7 +496,8 @@ footer {
 
 
 
-.contact-logo:hover {
+.contact-logo:hover,
+.contact-logo:focus {
   background: rgba(79, 243, 200);
   margin: 0;
 }
@@ -592,7 +599,8 @@ footer {
     margin: 0.5rem;
   }
 
-  .contact-logo:hover {
+  .contact-logo:hover,
+  .contact-logo:focus {
     margin: 0.5rem;
     height: 4rem;
   }
