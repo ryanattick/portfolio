@@ -132,10 +132,10 @@ body {
   background-color: rgba(79, 243, 200, 0.2);
   border-radius: 10px/30px;
   padding: 0.5rem;
-}*/
+}
 
 
-/*.bio-text {
+.bio-text {
   width: 15rem;
   height: auto;
   color: transparent;
